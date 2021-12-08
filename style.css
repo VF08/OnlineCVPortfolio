@@ -1,0 +1,561 @@
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); 
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+.topnav{
+    background-color: #0077ff;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+.topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 30px 17px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: rgb(0, 132, 255);
+}
+html {
+    font-family:'Monstserrat', sans-serif;
+}
+a {
+    text-decoration:none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* hero section */
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+    background-color: rgb(0, 110, 255);
+}
+.section-title span
+    {
+        color: rgb(0, 0, 0);
+    }
+ .cta{
+        display: inline-block;
+        padding: 10px 30px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 110, 255);
+        border:2px transparent;
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        margin-top: 20px;
+        transition: .4s ease background-color;
+        transition-property: background-color, color;
+    }
+ .cta:hover{
+        color: blue;
+        background-color: burlywood;
+    }
+    .me h1{
+        font-size: 3rem;
+        text-align: center;
+        text-transform: uppercase;
+        color:whitesmoke;
+    }
+    #hero{
+     background-image:url(./images/download.jpg); 
+    background-size: cover;
+    background-position: center;
+    position: initial;
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: cornflowerblue;
+    opacity: .7;
+    z-index: -1;
+}
+#hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+.hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 10s ease backwards;
+    animation-delay: 5s;
+}
+#hero h1:nth-child(1){
+    animation-delay: .5s;
+}
+#hero h1:nth-child(2){
+    animation-delay: .7s;
+}
+#hero h1:nth-child(3){
+    animation-delay: .9s;
+}
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: rgb(0, 110, 255);
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+}
+#hero h1:nth-child(1)span{
+    animation-delay: .5s;
+}
+#hero h1:nth-child(2)span{
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(3)span{
+    animation-delay: 2.5s;
+}
+/* end hero section */
+/* Education Section */
+    #education .education{
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        padding:0;
+    }
+    #education .education-top p{
+        font-size: 1.4rem;
+        margin-top: 5px;
+        line-height: 2.5rem;
+        font-weight: 300;
+        letter-spacing: .05rem;
+        color: #0099ff;
+    }
+    #education .education-bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+    #education .all-education{
+        flex-basis: 80%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 40px;
+        border-radius: 15px;
+        background-size: cover;
+        margin: 10px 5%;
+        position: initial;
+        overflow: hidden;      
+    }
+    .education{
+        background-image: url(./images/pngtree-my-resume-background-material-image_177383.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        width: 100%;
+    }
+#education .all-education::after{
+    content: '';
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+}
+#education .education-top .icon{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 25px;
+}
+#education .all-education h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 25px;
+}
+#education .all-education p{
+    color: #000000;;
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+}
+.wskill {
+    background-image: url("images/pngtree-my-resume-background-material-image_177383.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+}
+ #wskill .wskill{
+     flex-direction: column;
+     text-align: center;
+     margin: 0;
+     padding:0;
+ }
+ #wskill .wskill-heading h1{
+     margin-bottom: 20px;
+ }
+ #wskill .wskill-all{
+     display: flex;
+     align-content: center;
+     justify-content: center;
+     flex-direction: column;
+ }
+ #wskill .wskill-item{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     width: 80%;
+     margin: 10px auto;
+     overflow: hidden;
+     border-radius: 11px;
+ }
+ .wskill .wskill-info{
+     padding: 30px;
+     flex: 100%;
+     background-color: rgb(0, 110, 255);
+     height: 100%;
+     display: flex;
+     align-items: flex-start;
+     justify-content: center;
+     flex-direction: column;    
+ }
+ #wskill .wskill-info h1{
+     font-size: 4rem;
+     font-weight: 100;
+ }
+ #wskill .wskill-info p{
+color: white; 
+}
+.skills{
+    width: 100%;
+    margin: 20px auto;
+    color:rgb(255, 255, 255);
+}
+.bar{
+    background:#ddd;
+    display: block;
+    height: 18px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    overflow:hidden;
+    box-shadow: 0 0 10px #ffffff;
+}
+.bar span{
+    height: 9px;
+    float: left;
+    background: #0099ff;
+}
+.java{
+    width: 60%;
+    animation: java 2s;
+}
+.Cs{
+    width: 75%;
+    animation: Cs 2s;
+}
+.database{
+    width: 80%;
+    animation: database 2s;
+}
+.html{
+    width: 50%;
+    animation: html 2s;
+}
+.css{
+    width: 65%;
+    animation: css 2s;
+}
+.javascript{
+    width: 40%;
+    animation: javascript 2s;
+}
+/* Work section */
+/* About Moloi */
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    margin: 0 auto;
+    padding:0;
+}
+.about{
+    background-image: url("images/pngtree-my-resume-background-material-image_177383.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+#about .col-left{
+    width: 250px;
+    height: 360px;
+}
+.social-item{
+    float: right;
+    padding: 12px;
+}
+
+#about .col-right h2{
+    font-size: 1.5rem;
+   font-weight: 500;
+   letter-spacing: .3rem;
+   margin-bottom: 10px;
+}
+#about .col-right p{
+    margin-bottom: 20px;
+    font-size: larger;
+}
+#about .col-right .cta{
+    color: black ;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+#about .col-left .about-image{
+    height: 100%;
+    width: 100%;
+    position: initial;
+    margin-left: auto;
+    margin-right: auto;
+}
+ #about .col-left .about-image::after{
+  content: '';
+  position: absolute;
+  left: -33px;
+  top: 19px;
+  height: 98%;
+  width: 98%;
+  border: 7px solid gray;
+  z-index: -1;
+ }
+
+/* finishAbout Moloi */
+/* Contac me */
+#contact .contact{
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+.contact{
+    background-image: url("images/pngtree-my-resume-background-material-image_177383.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+#contact .cont-items{
+    width: 80%;
+    
+}
+#contact .cont-item{
+    width: 90%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#contact .icon{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+#contact .cont-info h1{
+font-size: 2.3rem;
+font-weight: 500;
+margin-bottom: 5px;
+}
+#contact .cont-info h2{
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: #34b5e8;
+    }
+/* endContac me */
+/* footer */
+#footer{
+    background-image: linear-gradient(50deg, #2a8dff 0%, #485563 100%);
+}
+#footer .footer{
+    min-height: 180px;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+#footer h2{
+    color:whitesmoke;
+    font-weight: 500;
+    font-size: 1.7rem;
+    text-align: center;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 25px;
+    text-align: center;
+}
+#footer .social-item{
+    height: 50px;
+    width: 50px;
+    margin: 0 4px;
+    text-align: center;
+    right: 50%;
+}
+#footer p{
+    color: white;
+    font-size: 1rem;
+}
+/* endfooter */
+/* keyframes */
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left:0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+    }
+@keyframes text_reveal{
+    100%{
+        color: whitesmoke;
+    }
+}
+@keyframes text_reveal_name{
+    100%{
+        color: red;
+        font-weight: 500;
+    }
+}
+@keyframes java{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:80%;
+    }
+}
+@keyframes Cs{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:95%;
+    }
+}
+@keyframes database{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:60%;
+    }
+}
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:55%;
+    }
+}
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:67%;
+    }
+}
+@keyframes javascript{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:40%;
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .cta,.wskill, .wskill-info{
+        font-size: 2.4rem;
+        padding:20px 60px;
+        max-width: 1000px;
+    }
+    h1.section-title{
+        font-size: 6rem;
+    }
+    
+    #hero h1{
+        font-size: 6.5rem;
+    }
+.education .education-bottom .all-education{
+    flex-basis: 45%;
+    margin: 1.5%;
+}
+#about .about{
+    flex-direction: row;
+}
+#about .col-left{
+    width: 600px;
+    height: 400px;
+    padding-left: 60px;
+}
+#about .about .col-left .about-image::after{
+    left: -45px;
+    top: 34px;
+    height: 97%;
+    width: 97%;
+    border: 10px solid gray;
+}
+#about .col-right{
+    text-align: left;
+    padding-left: 35px;
+}
+#contact .contact{
+    flex-direction: column;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: center;
+    min-width: 20vh;
+}
+#contact .cont-items{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0;
+}
+#contact .cont-items{
+    margin: 20px;
+}
+}
